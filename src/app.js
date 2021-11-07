@@ -3,7 +3,6 @@ const express = require('express')
 const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
-
 const app = express()
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
@@ -60,8 +59,7 @@ app.get('/weather', (req, res) => {
                 address: req.query.address
             })
         })
-    })
-    
+    }) 
 })
 
 app.get('/help/*', (req, res) => {
